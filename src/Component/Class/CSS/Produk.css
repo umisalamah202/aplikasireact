@@ -12,3 +12,11 @@
     height: 200px;
 }
 
+.btn-click {
+    background-color: indianred;
+    width: 100px;
+    color: black;
+    padding: 10px;
+    border: none;
+}
+
