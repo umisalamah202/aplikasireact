@@ -1,16 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
-import Home from './Component/Fungsional/Home';
-import Parent from './Component/Class/Parent';
-import BootstrapComp from './Component/Class/BootstrapComp';
-//import './App.css';
+import { BrowserRouter, Route, Switch} from 'react-router-dom'
 
-function App() {
+import NavbarComp from './component/Fungsional/NavbarComp';
+import HomePage from './component/Fungsional/HomePage';
+import About from './component/Fungsional/AboutComp';
+import DetailComp from './component/Fungsional/DetailComp';
+//import logo from './logo.svg';
+//import './App.css';
+//import Home from './component/Fungsional/Home';
+//import Parent from './component/Class/Parent';
+//import BootsrapComp from './component/Class/BootstrapComp';
+
+
+const App = () => {
   return (
-    <div className="App">
-      <BootstrapComp/>
-    </div>
-  );
+    <BrowserRouter>
+      <NavbarComp />
+      <Switch>
+        <Route exact path="/" component={HomePage} />
+        <Route exact path="/About" component={About} />
+        <Route exact path="/detail/:id" component={DetailComp}/>
+      </Switch>
+
+    </BrowserRouter>
+);
 }
 
 export default App;
