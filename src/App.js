@@ -1,16 +1,19 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch} from 'react-router-dom'
-
-import NavbarComp from './component/Fungsional/NavbarComp';
-import HomePage from './component/Fungsional/HomePage';
-import About from './component/Fungsional/AboutComp';
-import DetailComp from './component/Fungsional/DetailComp';
 //import logo from './logo.svg';
-//import './App.css';
-//import Home from './component/Fungsional/Home';
-//import Parent from './component/Class/Parent';
-//import BootsrapComp from './component/Class/BootstrapComp';
+//import Home from './Component/Fungsional/Home';
+//import Parent from './Component/Class/Parent';
+//import BootstrapComp from './Component/Class/BootstrapComp';
+import NavbarComp from './Component/Fungsional/NavbarComp';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import HomePage from './Component/Fungsional/HomePage';
+import AboutComp from './Component/Fungsional/AboutComp';
+import ListComp from './Component/Class/ListComp';
+import TambahComp from './Component/Class/TambahComp';
+import EditComp from './Component/Class/EditComp';
+//import DetailComp from './Component/Fungsional/DetailComp';
 
+// import Beranda from './Component/Class/Beranda';
+// import './App.css';
 
 const App = () => {
   return (
@@ -18,12 +21,18 @@ const App = () => {
       <NavbarComp />
       <Switch>
         <Route exact path="/" component={HomePage} />
-        <Route exact path="/About" component={About} />
-        <Route exact path="/detail/:id" component={DetailComp}/>
-      </Switch>
+        <Route exact path="/about" component={AboutComp} />
+        <Route exact path="/mahasiswa" component={ListComp} />
+        <Route exact path="/mahasiswa/tambah" component={TambahComp}/>
+        <Route exact path="/mahasiswa/edit" component={EditComp}/>
 
+        {/*<Route exact path="/detail/:id" component={DetailComp} /> */}
+      
+      </Switch>
     </BrowserRouter>
-);
+
+
+  );
 }
 
 export default App;
