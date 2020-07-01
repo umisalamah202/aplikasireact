@@ -6,7 +6,7 @@ const HooksComp = () => {
 const [jumlah, tambahJumlah] = useState(0)
 
 //login
-const [dataLogin] = useState ({username:'Rahmat Puji Widodo', token:'123abc', isLogin: true})
+const [dataLogin] = useState ({username:'firda', token:'123abc', isLogin: true})
 
 //Cek kondisi test untuk login
 let tampil;
