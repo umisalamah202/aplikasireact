@@ -11,7 +11,7 @@ function HooksUseEffects() {
     useEffect(() => {
         console.log("Memanggil use effects")
         axios.get(api + '/tampil').then(res => {
-            setMahasiswa[res.data.values]
+            setMahasiswa(res.data.values)
         })
 
     }, [])
