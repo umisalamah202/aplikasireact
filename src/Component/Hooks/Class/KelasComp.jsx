@@ -20,7 +20,7 @@ class KelasComp extends PureComponent {
         return (
             <div>
                 <h1>{this.state.jumlah}</h1>
-                <button onClick = {this.tambahKelas}>Tambah Kelas</button>
+                <button onClick = {this.tambahKelas}>Tambah Pembelian</button>
             </div>
         )
     }

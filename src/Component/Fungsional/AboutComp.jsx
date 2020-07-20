@@ -1,5 +1,5 @@
 import React from 'react'
-import { Jumbotron, Button, Container, Row, Col } from 'reactstrap';
+import {Card, Button, CardTitle, CardText, Row, Col,CardImg, Container } from 'reactstrap';
 import CardComp from './CardComp';
 import { useContext } from 'react';
 import { CartContext } from '../../CartContext';
@@ -7,24 +7,63 @@ import { CartContext } from '../../CartContext';
 function AboutComp() {
     
     return (
-        <div>
-            <Jumbotron>
-                <h1 className="display-3">About Us </h1>
-                <p className="lead">This is a simple hero unit, a simple Jumbotron-style component for calling extra attention to featured content or information.</p>
-                <hr className="my-2" />
-                <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-                <p className="lead">
-                    <Button color="primary">Learn More</Button>
-                </p>
-            </Jumbotron>
-            <Container>
-                <Row>
-                    <Col><CardComp id="1" judul="Belajar React" tanggal="22/06/2020"/></Col>
-                    <Col><CardComp id="2" judul="Belajar Golang" tanggal="23/06/2020"/></Col>
-                    <Col><CardComp id="3" judul="Belajar PHP" tanggal="24/06/2020"/></Col>
-                </Row>
-            </Container>
-        </div>
+        <Container>
+            <br/>
+            <Card  body inverse color="secondary">
+                <h1>KATEGORI</h1>
+                </Card>
+                <br/>
+        
+        <Row>
+            <Col sm="4">
+            <Card>
+                <CardImg top width="100%" src="https://thumbs.dreamstime.com/t/acer-logo-chorzow-poland-may-brand-black-laptop-company-established-taiwan-148943177.jpg" alt="Card image cap" />
+                </Card>
+        <Card body inverse color="info">
+          <h1><CardTitle>ACER</CardTitle></h1>
+          
+        </Card>
+        </Col>
+        </Row>
+        <br/>
+        <Row>
+            <Col sm="4">
+            <Card>
+                <CardImg top width="100%" src="https://asset.kompas.com/crops/J_310YyfbGKrucwaVgqqJRD4jyc=/114x32:492x284/750x500/data/photo/2020/06/03/5ed73583bdb60.jpg" alt="Card image cap" />
+                </Card>
+        <Card  body inverse color="info">
+          <h1><CardTitle>ASUS</CardTitle></h1>
+          <h3><CardText>With supporting text below as a natural lead-in to additional content.</CardText></h3>
+        </Card>
+      </Col>
+        </Row>
+        <br/>
+        <Row>
+            <Col sm="4">
+            <Card>
+                <CardImg top width="100%" src="https://kliknklik.com/blogs/wp-content/uploads/2015/06/550x-lenovo-brand-logo.jpg" alt="Card image cap" />
+                </Card>
+                <Card body inverse color="secondary">
+        <CardTitle>Special Title Treatment</CardTitle>
+        <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
+        <Button color="secondary">Button</Button>
+      </Card>
+      </Col>
+        </Row>
+        <br/>
+        <Row>
+            <Col sm="4">
+            <Card>
+                <CardImg top width="100%" src="https://media.hitekno.com/thumbs/2019/10/07/74124-ilustrasi-logo-hp-pixabayguillaume-preat/350x230-img-74124-ilustrasi-logo-hp-pixabayguillaume-preat.jpg" alt="Card image cap" />
+                </Card>
+        <Card  body inverse color="info">
+          <CardTitle>Special Title Treatment</CardTitle>
+          <CardText>Withhjikopkkklkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkh supporting text below as a natural lead-in to additional content.</CardText>
+          <Button>Go somewhere</Button>
+        </Card>
+      </Col>
+        </Row>
+        </Container>
     )
 }
 

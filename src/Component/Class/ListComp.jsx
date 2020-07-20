@@ -12,7 +12,7 @@ class ListComp extends Component {
         super(props)
 
         this.state = {
-            mahasiswa: [],
+            barang: [],
             response: '',
             display: 'none'
 
@@ -22,15 +22,15 @@ class ListComp extends Component {
     componentDidMount() {
         axios.get(api + '/tampil').then(res => {
             this.setState({
-                mahasiswa: res.data.values
+                barang: res.data.values
             })
         })
     }
 
-    Deletemahasiswa = (id_mahasiswa) => {
-        const { mahasiswa } = this.state
+    Deletebarang = (id_barang) => {
+        const { barang } = this.state
         const data = qs.stringify({
-            id_mahasiswa: id_mahasiswa
+            id_barang: id_barang
 
         })
 
@@ -43,10 +43,10 @@ class ListComp extends Component {
             if (json.data.status === 200) {
                 this.setState({
                     response: json.data.values,
-                    mahasiswa: mahasiswa.filter(mahasiswa => mahasiswa.id_mahasiswa !== id_mahasiswa),
+                    barang: barang.filter(barang => barang.id_barang !== id_barang),
                     display: 'block'
                 })
-                this.props.history.push('/mahasiswa')
+                this.props.history.push('/barang')
             } else {
                 this.setState({
                     response: json.data.values,
@@ -60,37 +60,43 @@ class ListComp extends Component {
     render() {
         return (
             <Container>
-                <h2> Data Mahasiswa</h2>
-                <Alert color="success" style={{ display: this.state.display }}>
+                <h2> Data Barang</h2>
+                <Alert color="info" style={{ display: this.state.display }}>
                     {this.state.response}
                 </Alert>
-                <NavLink href="/mahasiswa/tambah"><Button color="success">Tambah Data</Button></NavLink>
+                <NavLink href="/barang/tambah"><Button color="info">Tambah Data</Button></NavLink>
                 <hr />
-                <Table classname="table-bordered">
+                <Table className="table-bordered">
                     <thead>
                         <tr>
-                            <th>NIM</th>
-                            <th>Nama</th>
-                            <th>Jurusan</th>
+                            <th>Kode Barang</th>
+                            <th>Merek</th>
+                            <th>Nama Barang</th>
+                            <th>Stok</th>
+                            <th>Harga Persatuan</th>
                             <th>Aksi</th>
                         </tr>
                     </thead>
                     <tbody>
-                        {this.state.mahasiswa.map(mahasiswa =>
-                            <tr key={mahasiswa.id_mahasiswa}>
-                                <td>{mahasiswa.nim}</td>
-                                <td>{mahasiswa.nama}</td>
-                                <td>{mahasiswa.jurusan}</td>
+                        {this.state.barang.map(barang =>
+                            <tr key={barang.id_barang}>
+                                <td>{barang.kode_barang}</td>
+                                <td>{barang.merek}</td>
+                                <td>{barang.nama_barang}</td>
+                                <td>{barang.stok}</td>
+                                <td>{barang.harga_persatuan}</td>
                                 <td>
                                     <Link to=
                                         {
                                             {
-                                                pathname: '/mahasiswa/edit',
+                                                pathname: '/barang/edit',
                                                 state: {
-                                                    id_mahasiswa: mahasiswa.id_mahasiswa,
-                                                    nim: mahasiswa.nim,
-                                                    nama: mahasiswa.nama,
-                                                    jurusan: mahasiswa.jurusan
+                                                    id_barang: barang.id_barang,
+                                                    kode_barang: barang.kode_barang,
+                                                    merek: barang.merek,
+                                                    nama_barang: barang.nama_barang,
+                                                    stok: barang.stok,
+                                                    harga_persatuan: barang.harga_persatuan
                                                 }
                                             }
                                         }>
@@ -98,7 +104,7 @@ class ListComp extends Component {
                                        
                                     </Link>
                                     <span> </span>
-                                        <Button onClick={() => this.Deletemahasiswa(mahasiswa.id_mahasiswa)} color="danger"> Hapus </Button>
+                                        <Button onClick={() => this.Deletebarang(barang.id_barang)} color="danger"> Hapus </Button>
                                 </td>
                             </tr>
                         )}

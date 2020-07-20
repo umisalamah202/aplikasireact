@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Row } from 'reactstrap'
+import { Container, Row,Card } from 'reactstrap'
 import RowProduct from './RowProduct'
 
 function ProductComp() {
@@ -7,12 +7,14 @@ function ProductComp() {
         <div>
             <Container>
                 <hr/>
-                <h2>Produk</h2>
+                <Card  body inverse color="warning">
+                <h1>PRODUK</h1>
+                </Card>
                 <Row>
                     <RowProduct/>
-                    <RowProduct/>
-                    <RowProduct/>
                 </Row>
+               
+                
             </Container>
         </div>
 

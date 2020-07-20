@@ -12,10 +12,12 @@ class EditComp extends Component{
         super(props)
 
         this.state = {
-            id_mahasiswa: this.props.location.state.id_mahasiswa,
-            nim: this.props.location.state.nim,
-            nama: this.props.location.state.nama,
-            jurusam: this.props.location.state.jurusan,
+            id_barang: this.props.location.state.id_barang,
+            kode_barang: this.props.location.state.kode_barang,
+            merek: this.props.location.state.merek,
+            nama_barang: this.props.location.state.nama_barang,
+            stok: this.props.location.state.stok,
+            harga_persatuan: this.props.location.state.harga_persatuan,
             response: '',
             display: 'none'
         }
@@ -25,12 +27,14 @@ class EditComp extends Component{
         this.setState({[e.target.name] : e.target.value})
     }
 
-    ubahMahasiswa = (id_mahasiswa) => {
+    ubahBarang = (id_barang) => {
         const data = qs.stringify({
-            id_mahasiswa: id_mahasiswa,
-            nim: this.state.nim,
-            nama: this.state.nama,
-            jurusan: this.state.jurusan
+            id_barang: id_barang,
+            kode_barang: this.state.kode_barang,
+            merek: this.state.merek,
+            nama_barang: this.state.nama_barang,
+            stok: this.state.stok,
+            harga_persatuan: this.state.harga_persatuan
 
         });
         axios.put(api+ '/ubah', data)
@@ -53,39 +57,56 @@ class EditComp extends Component{
         return(
             <Container>
     <h4>Form Tambah Data</h4>
-    <Alert color="success" style={{display: this.state.display}}>
+    <Alert color="info" style={{display: this.state.display}}>
         {this.state.response}
     </Alert>
     <Form classname="form">
         <Col>
-        <Label>NIM</Label>
+        <Label>Kode Barang</Label>
         <FormGroup>
             <Row>
                 <Col>
-                <Input type="text" name="nim" value={this.state.nim} onChange={this.handleChange} placeholder="Masukan NIM"/>
+                <Input type="text" name="kode_barang" value={this.state.kode_barang} onChange={this.handleChange} placeholder="Masukan Kode Barang"/>
                 </Col>
             </Row>
         </FormGroup>
-        <Label>Nama</Label>
+        <Label>Merek</Label>
         <FormGroup>
             <Row>
                 <Col>
-                <Input type="text" name="nama" value={this.state.nama} onChange={this.handleChange} placeholder="Masukan Nama"/>
+                <Input type="text" name="merek" value={this.state.merek} onChange={this.handleChange} placeholder="Masukan Merek"/>
                 </Col>
             </Row>
         </FormGroup>
-        <Label>Jurusan</Label>
+        <Label>Nama Barang</Label>
         <FormGroup>
             <Row>
                 <Col>
-                <Input type="text" name="jurusan" value={this.state.jurusan} onChange={this.handleChange} placeholder="Masukan Jurusan"/>
+                <Input type="text" name="nama_barang" value={this.state.nama_barang} onChange={this.handleChange} placeholder="Masukan Nama Barang"/>
                 </Col>
             </Row>
         </FormGroup>
+        <Label>Stok</Label>
         <FormGroup>
             <Row>
                 <Col>
-                <Button type="button" onClick={()=>this.ubahMahasiswa(this.state.id_mahasiswa)}>Update</Button>
+                <Input type="text" name="stok" value={this.state.stok} onChange={this.handleChange} placeholder="Masukan Stok"/>
+                </Col>
+            </Row>
+        </FormGroup>
+        <Label>Harga Persatuan</Label>
+        <FormGroup>
+            <Row>
+                <Col>
+                <Input type="text" name="harga_persatuan" value={this.state.harga_persatuan} onChange={this.handleChange} placeholder="Masukan Harga Persatuan"/>
+                </Col>
+            </Row>
+        </FormGroup>
+
+        <FormGroup>
+            <Row>
+                <Col>
+                <Button type="button" onClick={()=>this.ubahBarang(this.state.id_barang)}>Update</Button>
                 </Col>
             </Row>
         </FormGroup>
