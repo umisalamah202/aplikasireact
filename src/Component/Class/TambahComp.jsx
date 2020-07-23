@@ -53,7 +53,7 @@ class TambahComp extends Component {
     render() {
         return(
 <Container>
-    <h4>Form Tambah Data</h4>
+    <h1>Form Tambah Data</h1>
     <Alert color="info" style={{display: this.state.display}}>
         {this.state.response}
     </Alert>

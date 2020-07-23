@@ -13,8 +13,6 @@ function ProductComp() {
                 <Row>
                     <RowProduct/>
                 </Row>
-               
-                
             </Container>
         </div>
 

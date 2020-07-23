@@ -3,6 +3,7 @@ import {Card, CardImg, CardText, CardBody,
     CardTitle, CardSubtitle, Button, Container} from 'reactstrap';
 import { useContext } from 'react';
 import { CartContext } from '../../CartContext';
+import { NavLink} from 'react-router-dom'
 
 function HomePage() {
     
@@ -19,7 +20,7 @@ function HomePage() {
           <CardImg top width="100%" src="https://laptopcounter.net/wp-content/uploads/2019/09/LOGO.png" alt="Card image cap" />
           <CardBody>
            
-            <Button>Button</Button>
+          <NavLink to='/about'><Button color="info">Nex</Button></NavLink>
           </CardBody>
         </Card>
       </div>

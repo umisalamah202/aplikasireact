@@ -53,6 +53,15 @@ const NavbarComp = (props) => {
 
           </Nav>
           <NavbarText>
+          <NavItem>
+              <NavLink to="/login" className="nav-link">login</NavLink>
+              <hr/>
+            </NavItem>
+
+          </NavbarText>
+          
+          
+          <NavbarText>
             <Button color="danger">
               <i className="fa fa-shopping-cart"></i>
               <span className="badge badge-light">{value}</span>
