@@ -2,10 +2,10 @@ import React from 'react';
 import { NavLink} from 'react-router-dom'
 
 import {
-     Container,Card,CardImg,Col,Row,Label,FormGroup,Input,Button,
+     Container,Card,CardImg,Col,Row,Label,FormGroup,Input,Button
   } from 'reactstrap';
 
-function Login() {
+function LoginPelanggan() {
 
     
     return (
@@ -19,7 +19,7 @@ function Login() {
                 </Card>
                 </Col>
                 <Col xs="6">
-                <h1>Form Login</h1>
+                <h1>Form Login Pelanggan</h1>
 
                 <FormGroup>
         <Label for="exampleEmail">Email</Label>
@@ -31,9 +31,9 @@ function Login() {
       </FormGroup>
       
       <hr/>
-    <NavLink to='/'><Button color="info">Login</Button></NavLink> <NavLink to='/register'><Button color="warning">Register</Button></NavLink>
+    <NavLink to='/'><Button color="info">Login</Button></NavLink> <NavLink to='/registerpelanggan'><Button color="warning">Register</Button></NavLink>
     <hr/>
-    <NavLink to='/register'>Jika belum memiliki akun register terlebih dahulu</NavLink>
+    
     <hr/>
    
                 </Col>
@@ -42,4 +42,4 @@ function Login() {
     )
 }
 
-export default Login
+export default LoginPelanggan

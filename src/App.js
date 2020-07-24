@@ -17,12 +17,12 @@ import { CartContext } from './CartContext';
 import ProductComp from './Component/Hooks/Functional/ProductComp';
 import HookReducer from './Component/Hooks/Functional/HookReducer';
 import Tagihan from './Component/Hooks/Functional/Tagihan';
-import Login from './Component/Class/Login';
-import Register from './Component/Class/Register';
-
+import LoginAdmin from './Component/Class/LoginAdmin';
+import LoginPelanggan from './Component/Class/LoginPelanggan';
+import RegisterPelanggan from './Component/Class/RegisterPelanggan';
+import RegisterAdmin from './Component/Class/RegisterAdmin';
 
 //import DetailComp from './Component/Fungsional/DetailComp';
-
 // import Beranda from './Component/Class/Beranda';
 // import './App.css';
 
@@ -75,8 +75,10 @@ const App = () => {
         <Route exact path="/produk" component={ProductComp} />
         <Route exact path="/reducer" component={HookReducer}/>
         <Route exact path="/tagihan" component={Tagihan}/>
-        <Route exact path="/login" component={Login}/>
-        <Route exact path="/register" component={Register}/>
+        <Route exact path="/loginpelanggan" component={LoginPelanggan}/>
+        <Route exact path="/loginadmin" component={LoginAdmin}/>
+        <Route exact path="/registerpelanggan" component={RegisterPelanggan}/>
+        <Route exact path="/registeradmin" component={RegisterAdmin}/>
 
         {/*<Route exact path="/detail/:id" component={DetailComp} /> */}
 

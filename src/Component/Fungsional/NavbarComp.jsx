@@ -4,14 +4,12 @@ import {
   Navbar,
   NavbarToggler,
   NavbarBrand,
-  Nav,
-  NavItem,
-  UncontrolledDropdown,
+  Nav,NavItem,UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
   DropdownItem,
   NavbarText,
-  Button
+  Button,UncontrolledButtonDropdown,ButtonDropdown,btnDropright
 } from 'reactstrap';
 import { NavLink } from 'react-router-dom'
 import { useContext } from 'react';
@@ -24,19 +22,39 @@ const NavbarComp = (props) => {
   const { value, setValue } = useContext(CartContext)
 
   return (
+    
     <div>
+      
       
       <Navbar color="info" light expand="md">
         <NavbarBrand href="/"></NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
-          <Nav className="mr-auto" navbar>
+        <UncontrolledButtonDropdown>
+      <DropdownToggle caret>
+        LOGIN
+      </DropdownToggle>
+      <DropdownMenu>
+        
+        <DropdownItem>
+        <NavItem>
+              <NavLink to="/loginpelanggan" className="nav-link">login Pelanggan</NavLink>
+            </NavItem>
+        </DropdownItem>
+        <DropdownItem>
+        <NavItem>
+              <NavLink to="/loginadmin" className="nav-link">Login Admin</NavLink>
+            </NavItem>
+        </DropdownItem>
 
+      </DropdownMenu>
+    </UncontrolledButtonDropdown>
+          <Nav className="mr-auto" navbar>
             <NavItem>
               <NavLink to="/" className="nav-link">Home</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink to="/about" className="nav-link">Katagori</NavLink>
+              <NavLink to="/about" className="nav-link">Kategori</NavLink>
             </NavItem>
             <NavItem>
               <NavLink to="/barang" className="nav-link">Barang</NavLink>
@@ -50,17 +68,8 @@ const NavbarComp = (props) => {
             <NavItem>
               <NavLink to="/reducer" className="nav-link">Pembelian</NavLink>
             </NavItem>
-
           </Nav>
-          <NavbarText>
-          <NavItem>
-              <NavLink to="/login" className="nav-link">login</NavLink>
-              <hr/>
-            </NavItem>
-
-          </NavbarText>
-          
-          
+         
           <NavbarText>
             <Button color="danger">
               <i className="fa fa-shopping-cart"></i>
@@ -70,7 +79,6 @@ const NavbarComp = (props) => {
         </Collapse>
       </Navbar>
     </div>
-
   )
 }
 
