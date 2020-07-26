@@ -3,6 +3,8 @@ import React, {Component } from 'react'
 import axios from 'axios'
 import {Container, Col, Row,Form, FormGroup, Alert, Label, Input, Button} from 'reactstrap'
 import {link} from 'react-router-dom'
+import { NavLink} from 'react-router-dom'
+
 
 const api = 'http://localhost:3001'
 
@@ -103,7 +105,7 @@ class TambahComp extends Component {
         <FormGroup>
             <Row>
                 <Col>
-                <Button type="button" onClick={this.Addbarang}>Submit</Button>
+                <Button type="button" onClick={this.Addbarang}>Submit</Button>  <NavLink to='/barang'><Button color="info">Kembali</Button></NavLink>
                 </Col>
             </Row>
         </FormGroup>

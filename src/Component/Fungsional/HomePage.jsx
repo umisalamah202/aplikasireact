@@ -20,7 +20,7 @@ function HomePage() {
           <CardImg top width="100%" src="https://laptopcounter.net/wp-content/uploads/2019/09/LOGO.png" alt="Card image cap" />
           <CardBody>
            
-          <NavLink to='/about'><Button color="info">Nex</Button></NavLink>
+          <NavLink to='/kategori'><Button color="info">Nex</Button></NavLink>
           </CardBody>
         </Card>
       </div>

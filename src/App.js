@@ -15,12 +15,13 @@ import HooksComp from './Component/Hooks/Functional/HooksComp';
 import HooksUseEffects from './Component/Hooks/Functional/HooksUseEffects';
 import { CartContext } from './CartContext';
 import ProductComp from './Component/Hooks/Functional/ProductComp';
-import HookReducer from './Component/Hooks/Functional/HookReducer';
 import Tagihan from './Component/Hooks/Functional/Tagihan';
 import LoginAdmin from './Component/Class/LoginAdmin';
 import LoginPelanggan from './Component/Class/LoginPelanggan';
 import RegisterPelanggan from './Component/Class/RegisterPelanggan';
 import RegisterAdmin from './Component/Class/RegisterAdmin';
+import Kategori from './Component/Fungsional/Kategori';
+import Pembelian from './Component/Hooks/Functional/Pembelian';
 
 //import DetailComp from './Component/Fungsional/DetailComp';
 // import Beranda from './Component/Class/Beranda';
@@ -73,12 +74,13 @@ const App = () => {
         <Route exact path="/hooks" component={HooksComp} />
         <Route exact path="/useeffects" component={HooksUseEffects} />
         <Route exact path="/produk" component={ProductComp} />
-        <Route exact path="/reducer" component={HookReducer}/>
         <Route exact path="/tagihan" component={Tagihan}/>
         <Route exact path="/loginpelanggan" component={LoginPelanggan}/>
         <Route exact path="/loginadmin" component={LoginAdmin}/>
         <Route exact path="/registerpelanggan" component={RegisterPelanggan}/>
         <Route exact path="/registeradmin" component={RegisterAdmin}/>
+        <Route exact path="/kategori" component={Kategori}/>
+        <Route exact path="/pembelian" component={Pembelian}/>
 
         {/*<Route exact path="/detail/:id" component={DetailComp} /> */}
 

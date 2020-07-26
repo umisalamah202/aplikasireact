@@ -1,70 +1,37 @@
 import React from 'react'
-import {Card, Button, CardTitle, CardText, Row, Col,CardImg, Container } from 'reactstrap';
-import CardComp from './CardComp';
-import { useContext } from 'react';
-import { CartContext } from '../../CartContext';
+import {Card, CardTitle,CardImgOverlay,CardImg } from 'reactstrap';
+
 
 function Kategori() {
     
     return (
-        <Container>
+        <div><Card inverse>
+        <CardImg width="100%" src="https://petrusadisusilo.files.wordpress.com/2013/05/1.jpg" alt="Card image cap" />
+        <CardImgOverlay>
             <br/>
             <Card  body inverse color="secondary">
-                <h1>KATEGORI</h1>
+                <h1>Bedasarkan Jenis Laptop</h1>
                 </Card>
                 <br/>
-        
-        <Row>
-            <Col sm="4">
-            <Card>
-                <CardImg top width="100%" src="https://thumbs.dreamstime.com/t/acer-logo-chorzow-poland-may-brand-black-laptop-company-established-taiwan-148943177.jpg" alt="Card image cap" />
-                </Card>
-        <Card body inverse color="info">
-          <h1><CardTitle>ACER</CardTitle></h1>
+            
+           
+          <h1><CardTitle>Laptop Mainstream</CardTitle></h1>
+          <CardTitle color="info">Seringkali kita mendengar istilah ini, dan ternyata banyak dari kita tidak mengetahui secara pasti mengenai hal tersebut. Pilihan mainstream biasanya berkaitan dengan pengguna pada umumnya, termasuk juga pada anggaran terbatas. Entah anda seringkali menjalankan beberapa aplikasi umum seperti office, browsing web, menonton video maupun gaming kasual yang tidak berat. Hal tersebut berarti anda termasuk sebagai pengguna mainstream, sehingga kehadiran laptop mainstream benar-benar menjadi pilihan yang sangat ideal untuk bisa memenuhi semua kebutuhan umum anda.</CardTitle>
+          <h1><CardTitle>Ultrabook</CardTitle></h1>
+          <CardTitle>Jika anda menginginkan laptop yang jauh lebih tipis, kinerja baterai yang handal, bentuk desain yang terbaik dengan kualitas bahan yang istimewa, maka kehadiran ultrabook merupakan jawabannya. Ini merupakan pilihan premium yang hadir pada sebuah laptop. Produsen lebih memfokuskan penggunaan ultrabook sebagai pilihan laptop dengan tingkat mobilitas yang terbaik. Sehingga, pilihan laptop ini benar-benar sangat ideal untuk mereka yang memiliki akses mobilitas tinggi.</CardTitle>
           
-        </Card>
-        </Col>
-        </Row>
-        <br/>
-        <Row>
-            <Col sm="4">
-            <Card>
-                <CardImg top width="100%" src="https://asset.kompas.com/crops/J_310YyfbGKrucwaVgqqJRD4jyc=/114x32:492x284/750x500/data/photo/2020/06/03/5ed73583bdb60.jpg" alt="Card image cap" />
-                </Card>
-        <Card  body inverse color="info">
-          <h1><CardTitle>ASUS</CardTitle></h1>
-          <h3><CardText>With supporting text below as a natural lead-in to additional content.</CardText></h3>
-        </Card>
-      </Col>
-        </Row>
-        <br/>
-        <Row>
-            <Col sm="4">
-            <Card>
-                <CardImg top width="100%" src="https://kliknklik.com/blogs/wp-content/uploads/2015/06/550x-lenovo-brand-logo.jpg" alt="Card image cap" />
-                </Card>
-                <Card body inverse color="secondary">
-        <CardTitle>Special Title Treatment</CardTitle>
-        <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
-        <Button color="secondary">Button</Button>
+        
+          <h1>Laptop Gaming</h1>
+          <CardTitle>Laptop ini biasanya lebih difokuskan pada pilihan spesifikasi yang cukup tangguh, seperti kehadiran prosesor yang jauh lebih baik dan pilihan grafis diskrit yang memukau. Meskipun begitu, ada banyak pilihan kelas pada seri ini, mulai dari kisaran yang sangat terjangkau hingga pada pilihan super high-end dengan spesifikasi yang mendahaga.</CardTitle>
+       
+        
+          <h1>Workstation Laptop</h1>
+          <CardTitle> Pilihan laptop ini benar-benar dihadirkan dengan spesifikasi yang super tangguh, bahkan anda akan melihat pilihan prosesor dan grafis khusus untuk beberapa aplikasi menuntut, seperti Intel Xeon, Nvidia Quadro dan sebagainya. Dan jangan harap untuk melihat pilihan harga terjangkau, ini lebih pada kelas elit untuk pilihan pengguna khusus.</CardTitle>
+      
+        </CardImgOverlay>
       </Card>
-      </Col>
-        </Row>
-        <br/>
-        <Row>
-            <Col sm="4">
-            <Card>
-                <CardImg top width="100%" src="https://media.hitekno.com/thumbs/2019/10/07/74124-ilustrasi-logo-hp-pixabayguillaume-preat/350x230-img-74124-ilustrasi-logo-hp-pixabayguillaume-preat.jpg" alt="Card image cap" />
-                </Card>
-        <Card  body inverse color="info">
-          <CardTitle>Special Title Treatment</CardTitle>
-          <CardText>Withhjikopkkklkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkh supporting text below as a natural lead-in to additional content.</CardText>
-          <Button>Go somewhere</Button>
-        </Card>
-      </Col>
-        </Row>
-        </Container>
+      </div>
     )
 }
 
-export default Kategori
+export default Kategori;

@@ -4,7 +4,7 @@ import { NavLink} from 'react-router-dom'
 import { useContext} from 'react'
 import { keranjangContext} from '../../../App'
 
-function HookReducer() {
+function Pembelian() {
 
     const countContext = useContext (keranjangContext)
     return (
@@ -38,4 +38,4 @@ function HookReducer() {
     )
 }
 
-export default HookReducer
+export default Pembelian

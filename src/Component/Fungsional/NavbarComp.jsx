@@ -54,19 +54,16 @@ const NavbarComp = (props) => {
               <NavLink to="/" className="nav-link">Home</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink to="/about" className="nav-link">Kategori</NavLink>
+              <NavLink to="/kategori" className="nav-link">Kategori</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink to="/barang" className="nav-link">Barang</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink to="/useeffects" className="nav-link">Data Barang</NavLink>
+              <NavLink to="/barang" className="nav-link">Data Barang</NavLink>
             </NavItem>
             <NavItem>
               <NavLink to="/produk" className="nav-link">Produk</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink to="/reducer" className="nav-link">Pembelian</NavLink>
+              <NavLink to="/pembelian" className="nav-link">Pembelian</NavLink>
             </NavItem>
           </Nav>
          

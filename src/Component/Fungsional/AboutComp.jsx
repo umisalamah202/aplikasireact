@@ -7,6 +7,7 @@ import { CartContext } from '../../CartContext';
 function AboutComp() {
     
     return (
+      
         <Container>
             <br/>
             <Card  body inverse color="secondary">
@@ -64,6 +65,7 @@ function AboutComp() {
       </Col>
         </Row>
         </Container>
+      
     )
 }
 

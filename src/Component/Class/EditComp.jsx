@@ -3,9 +3,11 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import qs from 'querystring'
 import {Link} from 'react-router-dom'
+import { NavLink} from 'react-router-dom'
 import {Container, Col, Row,Form, FormGroup, Alert, Label, Input, Button} from 'reactstrap'
 
 const api = 'http://localhost:3001'
+
 
 class EditComp extends Component{
     constructor(props){
@@ -27,9 +29,9 @@ class EditComp extends Component{
         this.setState({[e.target.name] : e.target.value})
     }
 
-    ubahBarang = (id_barang) => {
+    ubahBarang = (idbarang) => {
         const data = qs.stringify({
-            id_barang: id_barang,
+            id_barang: idbarang,
             kode_barang: this.state.kode_barang,
             merek: this.state.merek,
             nama_barang: this.state.nama_barang,
@@ -106,7 +108,7 @@ class EditComp extends Component{
         <FormGroup>
             <Row>
                 <Col>
-                <Button type="button" onClick={()=>this.ubahBarang(this.state.id_barang)}>Update</Button>
+                <Button type="button" onClick={()=>this.ubahBarang(this.state.id_barang)}>Update</Button>  <NavLink to='/barang'><Button color="info">Kembali</Button></NavLink>
                 </Col>
             </Row>
         </FormGroup>
